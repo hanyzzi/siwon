@@ -135,7 +135,7 @@
 }
 
 @media (min-width: 600px) {
-	.card-list {
+	.card_list {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -1rem;
