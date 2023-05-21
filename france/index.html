@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="kp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS style-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- scrirt -->
+    <script src="js/jquery.min_1.12.4.js" defer></script>
+    <script src="js/skrollr.min.js" defer></script>
+    <script src="js/count.js" defer></script>
+    <script src="js/custom.js" defer></script>
+</head>
+<body>
+	<div class="scroll">0</div>
+
+    <section id="section1">
+        <div class="cld_1"data-0="transform:translateX(0%);"data-200="transform:translateX(10%);">></div>
+        <div class="cld_2"data-0="transform:translateX(0%);"data-200="transform:translateX(30%);"></div>
+        <div class="cld_3"data-0="transform:translateX(0%);"data-200="transform:translateX(20%);"></div>
+        <div class="cld_bg"></div>
+        <div class="plane"data-0="transform:translate(0%,0%)"data-500="transform:translate(1000%, -1000%);"></div>
+        <div class="sun"data-0="transform:translate(0%,0%);"data-500="transform:translate(-100%,-120%)"></div>
+        <div class="obj1"></div>
+        <div class="obj2"></div>
+        <div class="obj3" data-0="left:0%;"data-500="left:2%"></div>></div>
+        <div class="obj4" data-0="left:0%;"data-500="left:-3%"></div>
+        <div class="tower" data-0="bottom:-50%"data-500="bottom:0;"></div>
+        <div class="title" data-0="opacity:0.2;top:-20%"data-900="opacity:1;top:100%">
+            <img src="img/title.png" alt="" />
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="moon"data-1700="opacity:0;transform: translate(0%,0%) rotate(30deg);"data-2000="opacity:1;transform: translate(-300%,-50%) rotate(-45deg);"data-2400="opacity:0;transform: translate(-500%,20%) rotate(-60deg);"></div>
+        <div class="title2" data-1300="opacity:0;position:fixed;"data-1800="opacity:1;position:fixed;" data-2200="opacity:0;"><img src="img/title2.png" alt="" /></div>
+        
+        <div class="cld_bg"></div>
+        <div class="star"></div>
+        <div class="obj1"></div>
+        <div class="obj2"></div>
+        <div class="obj3"></div>
+        <div class="obj4"></div>
+        <div class="tower"></div>
+        <div class="title3"data-2500="opacity:0;transform:translateY(0%)" data-3700="opacity:1;transform:translateY(400%);">
+            <img src="img/title3.png" alt="" />
+        </div>
+    </section>
+
+    <section id="section3">
+        <article class="cont_1">
+            <p class="text">
+                독학이 두려웠던 자기계발러,
+                <br><strong class="point" data-4500="opacity:0.3;" data-4700="opacity:1;">단기간에 회화를 쉽게 배우고 싶은 분,</strong> 공부 하는 유학준비생, 해외 업무를 준비하는 직장인, 기초부터 차근차근 배우고 싶은 분, 유튜브를 봐도 어려운 분들께 추천해요.
+            </p>
+        </article>
+
+        <article class="cont_2">
+            <strong class="point">프랑스어,<br><em data-5100="color:rgb(255, 255, 255)" data-5500="color:rgb(44, 231, 222);">말문이 트이다!</em></strong>
+            <p class="text">
+                주요 패턴을 학습하고
+                <br>반복하는 훈련을 통해 자연스럽게
+                <br>언어에 대해 말문이 트이면서
+                <br>따라할 수 있어요.
+            </p>
+        </article>
+    </section>
+
+    <style>
+        #section4 { position: relative;}
+        #section4 .text1{ width: 1031px; margin-left: 150px; }
+        #section4 .text2 { width: 809px; margin: 276px 171px 276px auto; }
+        #section4 .mov { position: absolute;top: 90px;left: 50%;margin-left: -450px;}
+    </style>
+    <section id="section4">
+        <article class="cont_1">
+            <div class="text1"><img src="/img/sec04_top_text.png" alt=""></div>
+            <div class="text2"><img src="/img/sec04_bottom_text.png" alt=""></div>
+            <div class="mov"><img src="/img/sec04_mov.png" alt=""></div>
+        </article>
+    </section>
+
+    
+    
+
+    
+</body>
+</html>
