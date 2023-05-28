@@ -6,8 +6,8 @@ var s = skrollr.init({
 
 //counter
 function counter() {
-    if( $('.skill .count').size() ){
-        var count = $('.skill .count');
+    if( $('#section8 .count').size() ){
+        var count = $('#section8 .count');
 
         count.each(function () {
             var $this = $(this);
