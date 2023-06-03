@@ -1,20 +1,22 @@
 $(document).ready(function() {
     let sec06_sl = new Swiper('#section6 .swiper-container', {
         loop: true,
+        speed: 500,
+        autoplay: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         effect: 'coverflow',
         coverflowEffect: {
             rotate: 0,
-            stretch: 500,
-            depth: 100,
-            modifier: 1.4,
-            slideShadows : true,
+            stretch: 80,
+            depth: 500,
+            modifier: 1,
+            slideShadows: false,
         },
         navigation: {
-            prevEl: '#section6 .slide_block .navigation .next',
-            nextEl: '#section6 .slide_block .navigation .prev',
+            prevEl: '#section6 .slide_block .navigation .prev',
+            nextEl: '#section6 .slide_block .navigation .next',
         },
     
         on: {
@@ -54,7 +56,7 @@ $(window).scroll(function(){
     else if(wScroll >= 1800 ){$('.moon').removeClass('active')}
 
     // 빌딩 up
-    if (wScroll >= 3400) {
+    if (wScroll >= 3300) {
         $('#section2 [class^="obj"]').addClass('activeUp');
     }
 
@@ -70,47 +72,41 @@ $(window).scroll(function(){
         $("#section7 .list").removeClass("pos");
     }
 
-    // sec07 bg color
-    if( wScroll >= 10500 && wScroll < 11000  ){
-        $("#section7").addClass("step2");
-    } else {
-        $("#section7").removeClass("step2");
-    }
-
-    // sec07 bg color
-    if( wScroll >= 11000 && wScroll < 12800  ){
-        $("#section7").addClass("step3");
-    } else {
-        $("#section7").removeClass("step3");
-    }
-
+    $("#section8").removeClass("pos");
     //section8 fixed
-    if( wScroll >= 12500 && wScroll < 13100  ){
+    if( wScroll >= 12400 && wScroll < 13800  ){
         $("#section8").addClass("pos");
     } else {
         $("#section8").removeClass("pos");
     }
 
-    //section7 fixed 제거
-    // if( wScroll > 13100  ){
-    //     $("#section7").css('position','relative');
-    // }
-
-    if( wScroll >= 13060 && wScroll < 15000 ){
-        $('#section9').addClass('pos');
-        $('#section9 .extend').addClass('active');
-        // $("#section8").removeClass("pos");
+    // section8 fixed
+     if( wScroll >= 13500 ){
+        $("#section9").addClass("active");
     } else {
-        $('#section9').removeClass('pos');
-        // $('#section9 .extend').removeClass('active');
-        // $("#section8").removeClass("pos");
+        $("#section9").removeClass("active");
     }
 
-    // if( wScroll >= 14000 ){
-    //     $('#section10').addClass('pos');
+    // section7 fixed 제거
+    if( wScroll > 13100  ){
+        $("#section7").css('position','relative');
+    }
+
+    // if( wScroll >= 13060 && wScroll < 15000 ){
+    //     $('#section9').addClass('pos');
+    //     $('#section9 .extend').addClass('active');
+    //     // $("#section8").removeClass("pos");
     // } else {
-    //     $('#section10').removeClass('pos');
+    //     $('#section9').removeClass('pos');
+    //     // $('#section9 .extend').removeClass('active');
+    //     // $("#section8").removeClass("pos");
     // }
+
+    if( wScroll >= 14000 ){
+        $('#section10').addClass('active');
+    } else {
+        $('#section10').removeClass('active');
+    }
     
 });
 
