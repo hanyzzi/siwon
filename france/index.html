@@ -21,7 +21,7 @@
 </head>
 <body>
     <button class="gotop">Top</button>
-	<div class="scroll">0</div>
+	<!-- <div class="scroll">0</div> -->
 
     <section id="section1">
         <div class="cld_1"data-0="transform:translateX(0%);"data-200="transform:translateX(10%);"></div>
@@ -47,7 +47,7 @@
         <div class="title2" data-1300="opacity:0;position:fixed;"data-1800="opacity:1;position:fixed;" data-2200="opacity:0;"><img src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/title2.png" alt="" /></div>
         
         <div class="cld_bg"></div>
-        <div class="star"></div>
+        <div class="star blink"></div>
         <div class="obj1"></div>
         <div class="obj2"></div>
         <div class="obj3"></div>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section id="section3">
+    <section id="section3" data-5000="transform: translateY(0%);" data-5500="transform: translateY(-150%);" >
         <article class="cont_1">
             <p class="text">
                 <em class="point" data-4400="opacity:0.3;" data-4600="opacity:1;" data-4700="opacity:0.3;">독학이 두려웠던 자기계발러,</em>
@@ -71,13 +71,25 @@
         </article>
 
         <article class="cont_2">
-            <strong class="point">프랑스어,<br><em class="tit" data-5200="color:rgb(255, 255, 255)" data-5500="color:rgb(44, 231, 222);">말문이 트이다!</em></strong>
-            <p class="text">
-                주요 패턴을 학습하고
-                <br>반복하는 훈련을 통해 자연스럽게
-                <br>언어에 대해 말문이 트이면서
-                <br>따라할 수 있어요.
-            </p>
+            <ul>
+                <li>
+                    <strong class="point">프랑스어,<br><em class="tit" data-5000="color:rgb(255, 255, 255)" data-5200="color:rgb(44, 231, 222);">말문이 트이다!</em></strong>
+                    <p class="text">
+                        주요 패턴을 학습하고
+                        <br>반복하는 훈련을 통해 자연스럽게
+                        <br>언어에 대해 말문이 트이면서
+                        <br>따라할 수 있어요.
+                    </p>
+                </li>
+                <li>
+                    <strong class="point">프랑스어가 어렵다는<br><em class="tit" data-5300="color:rgb(255, 255, 255)" data-5400="color:rgb(44, 231, 222);">편견을 깨다!</em></strong>
+                    <p class="text">
+                        누구나 쉽게 프랑스어를 배우고 흥미를
+                        <br>느낄 수 있도록 진심을 다해
+                        <br>왕초보탈출 강의를 만들었습니다.
+                    </p>
+                </li>
+            </ul>
         </article>
     </section>
 
@@ -150,9 +162,9 @@
         <i class="badge"></i>
     </section>
 
-    <section id="section7">
-        <ul class="list" data-10300="top:0%"  data-11500="top:-150%">
-            <li>
+    <section id="section7" data-11000="transform: translateY(0%)"  data-11500="transform: translateY(-100%)">
+        <ul class="list" id="book">
+            <li class="active">
                 <div class="txt">
                     <strong>오늘의 학습</strong>
                     <p>
@@ -201,7 +213,7 @@
         </ul>
     </section>
 
-    <section id="section8" data-13000="top:0%" data-13800="top: -100%;">
+    <section id="section8" data-13000="transform: translateY(0%)"  data-14000="transform: translateY(-100%)">
         <div class="top_area">
             <ul>
                 <li class="good"> 
@@ -211,35 +223,37 @@
                 </li>
                 <li class="reply"> 
                     <i class="ico"></i>
-                    <div class="num"><strong class="count">2340</strong>건</div>
+                    <div class="num"><strong class="count">340</strong>건</div>
                     <em>많은 수강생들의 리얼 후기</em>
                 </li>
             </ul>
         </div>
 
         <div class="review_area">
-            <img data-12500="left:30%" data-13500="left:-30%" src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/review_sl.png" alt="">
+            <img data-12100="left:30%" data-13000="left:-30%" src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/review_sl.png" alt="">
         </div>
     </section>
 
     <section id="section9">
         <p class="txt">
             <em class="point">하루 20분!</em>
-            <br><em>말부터 트이는 프랑스어</em>
+            <br><em class="md">말부터 트이는 프랑스어</em> 
             <br><em class="extend">지금도 늦지 않았습니다.</em>
         </p>
     </section>
 
     <section id="section10">
         <div class="tit">
-            <em>확실한 프랑스어 왕초보 탈출을 위해</em>
-            <br><strong class="point">준비한 구성</strong>
+            <img src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/apply_info.png" alt="">
         </div>
 
         <div class="wrap_apply">
-            <div class="apply_block">
-                <img src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/apply_box2.png" alt="">
-                <a class="bt_apply" href="javascript:void(0);">수강신청하기 ></a>
+            <div class="inner">
+                <div class="apply_block">
+                    <img class="price" src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/apply_price.png" alt="">
+                    <a class="bt_apply" href="javascript:void(0);">수강신청하기 ></a>
+                </div>
+                <img class="book" src="https://raw.githubusercontent.com/hanyzzi/siwon/main/france/img/apply_book.png" alt="">
             </div>
         </div>
     </section>

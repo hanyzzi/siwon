@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    $("#section1").addClass('open');
+
+    setTimeout(function() {
+        $("#section1").removeClass('open');
+        $("#section1").addClass('play');
+    }, 2000); 
+
     let sec06_sl = new Swiper('#section6 .swiper-container', {
         loop: true,
         speed: 500,
@@ -22,7 +29,6 @@ $(document).ready(function() {
         on: {
             slideChange: function () {
                 var realActiveSlideIndex = this.realIndex;
-                var activeSlideIndex = this.activeIndex;
     
                 // 슬라이드 인덱스에 따라서 .book_txt 내용 변경
                 var bookTxtElement = document.querySelector('.book_txt');
@@ -41,7 +47,6 @@ $(document).ready(function() {
             }
         }
     });
-    
 });
 
 $(window).scroll(function(){
@@ -61,53 +66,61 @@ $(window).scroll(function(){
     }
 
     // 말문이 트이다
-    if (wScroll >= 5100) {
+    if (wScroll >= $("#section3").offset().top - 100 ) {
         $('#section3 .cont_2 .tit').addClass('active');
+    }
+    
+    // 도서 내지 
+    if ( wScroll >= 1000 ) {
+        $('#book li').removeClass('active');
+        $('#book li:nth-child(1)').addClass('active');
+    } 
+
+    if ( wScroll >= 10200 ) {
+        $('#book li').removeClass('active');
+        $('#book li:nth-child(2)').addClass('active');
+    } 
+    
+    if ( wScroll >= 10400 ) {
+        $('#book li').removeClass('active');
+        $('#book li:nth-child(3)').addClass('active');
+    }
+
+    //section3 fixed
+    if( wScroll >= $("#section3").offset().top - 100 && wScroll < 5600  ){
+        $("#section3").addClass("pos");
+    } else {
+        $("#section3").removeClass("pos");
     }
 
     //section7 fixed
-    if( wScroll >= $("#section7").offset().top && wScroll < 11500  ){
-        $("#section7 .list").addClass("pos");
+    if( wScroll >= $("#section7").offset().top - 200 && wScroll < 11500  ){
+        $("#section7").addClass("pos");
     } else {
-        $("#section7 .list").removeClass("pos");
+        $("#section7").removeClass("pos");
     }
 
-    $("#section8").removeClass("pos");
     //section8 fixed
-    if( wScroll >= 12400 && wScroll < 13800  ){
+    $("#section8").removeClass("pos");
+    if( wScroll >= $("#section8").offset().top  && wScroll < 14000  ){
         $("#section8").addClass("pos");
     } else {
         $("#section8").removeClass("pos");
     }
 
-    // section8 fixed
+    // section9 animation
      if( wScroll >= 13500 ){
         $("#section9").addClass("active");
     } else {
         $("#section9").removeClass("active");
     }
 
-    // section7 fixed 제거
-    if( wScroll > 13100  ){
-        $("#section7").css('position','relative');
-    }
-
-    // if( wScroll >= 13060 && wScroll < 15000 ){
-    //     $('#section9').addClass('pos');
-    //     $('#section9 .extend').addClass('active');
-    //     // $("#section8").removeClass("pos");
-    // } else {
-    //     $('#section9').removeClass('pos');
-    //     // $('#section9 .extend').removeClass('active');
-    //     // $("#section8").removeClass("pos");
-    // }
-
-    if( wScroll >= 14000 ){
+    // section10 animation
+    if( wScroll >= $("#section10").offset().top + 100 ){
         $('#section10').addClass('active');
     } else {
         $('#section10').removeClass('active');
     }
-    
 });
 
 $('.gotop').on('click',function(){
